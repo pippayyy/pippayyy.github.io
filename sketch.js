@@ -14,7 +14,7 @@ centre_x = 100
 centre_y = 100
 
 function setup() {
-  createCanvas(displayWidth/2,displayHeight/2)
+  createCanvas(displayWidth,displayHeight)
   background(230)
   radius = height/2
 }
