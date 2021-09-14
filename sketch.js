@@ -16,7 +16,7 @@ centre_y = 100
 function setup() {
   createCanvas(displayWidth/2,displayHeight/2)
   background(230)
-  radius = height/2
+  radius = height-10000
 }
 
 
@@ -37,7 +37,7 @@ function draw() {
             curveVertex(x,y-100)}}
         endShape(CLOSE)
         if(radius < 0){
-            radius = height/4
+            radius = height - 10000
             r=Math.floor(Math.random() * 256)
             g=Math.floor(Math.random() * 256)
             b=Math.floor(Math.random() * 256)
