@@ -44,7 +44,6 @@ function draw() {
             a=0}
         else{
             radius -= 2
-        print(radius)
         r += 1
         b += 0.5
         g += 0.5
