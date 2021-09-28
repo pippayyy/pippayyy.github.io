@@ -1,3 +1,11 @@
+html, body {
+  margin: 200;
+  padding: 200;
+}
+canvas {
+  display: block;
+}
+
 .container {
   display: grid;
   grid-template-columns: 1fr 0.8fr 1.2fr;
