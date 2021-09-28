@@ -1,11 +1,3 @@
-html, body {
-  margin: 200;
-  padding: 200;
-}
-canvas {
-  display: block;
-}
-
 .container {
   display: grid;
   grid-template-columns: 1fr 0.8fr 1.2fr;
@@ -73,3 +65,29 @@ canvas {
 .Reset { grid-area: Reset; }
 
 .Info { grid-area: Info; }
+
+
+html, body , .container {
+  height: 100%;
+  margin: 0;
+}
+  
+/* For presentation only, no need to copy the code below */
+
+.container * {
+  border: 1px solid red;
+  position: relative;
+}
+
+.container *:after {
+  content:attr(class);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
