@@ -1,0 +1,67 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr 1.2fr;
+  grid-template-rows: 0.5fr 1.5fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Choices Choices Choices"
+    "Draw Draw Draw"
+    "Footer Footer Footer";
+}
+
+.Choices {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "num1 num2 num3"
+    "Title1 Title2 Title3"
+    "Selector1 Selector2 Selector3";
+  grid-area: Choices;
+}
+
+.num1 { grid-area: num1; }
+
+.num2 { grid-area: num2; }
+
+.num3 { grid-area: num3; }
+
+.Title2 { grid-area: Title2; }
+
+.Title1 { grid-area: Title1; }
+
+.Title3 { grid-area: Title3; }
+
+.Selector2 { grid-area: Selector2; }
+
+.Selector3 { grid-area: Selector3; }
+
+.Selector1 { grid-area: Selector1; }
+
+.Draw { grid-area: Draw; }
+
+.Footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". GO ."
+    "Download Share Reset"
+    "Info Info Info";
+  grid-area: Footer;
+}
+
+.GO { grid-area: GO; }
+
+.Download { grid-area: Download; }
+
+.Share { grid-area: Share; }
+
+.Reset { grid-area: Reset; }
+
+.Info { grid-area: Info; }
