@@ -1,7 +1,7 @@
 .container {
   display: grid;
   grid-template-columns: 1fr 0.8fr 1.2fr;
-  grid-template-rows: 0.5fr 1.5fr 1fr;
+  grid-template-rows: 0.5fr 1.7fr 0.8fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -13,7 +13,7 @@
 .Choices {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 0.8fr 0.8fr 1.4fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -46,7 +46,7 @@
 .Footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1.4fr 0.9fr 0.7fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
