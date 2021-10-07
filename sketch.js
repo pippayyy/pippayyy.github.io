@@ -14,7 +14,7 @@ centre_x = 100
 centre_y = 100
 
 function setup() {
-  var MyCanvas = createCanvas(displayWidth,displayHeight*0.8);
+  var MyCanvas = createCanvas(800,600);
   MyCanvas.parent("DrawingContainer");
   background(230)
   radius = height/2
@@ -38,7 +38,7 @@ function draw() {
             curveVertex(x,y-100)}}
         endShape(CLOSE)
         if(radius < 0){
-            radius = height/4
+            radius = height/2
             r=Math.floor(Math.random() * 256)
             g=Math.floor(Math.random() * 256)
             b=Math.floor(Math.random() * 256)
