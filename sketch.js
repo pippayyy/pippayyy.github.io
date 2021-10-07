@@ -13,13 +13,16 @@ stroke_weight=1
 centre_x = 100
 centre_y = 100
 
-function setup() {
-  var MyCanvas = createCanvas(800,600);
-  MyCanvas.parent("DrawingContainer");
-  background(230)
-  radius = height/2
-}
 
+function setup() {
+    var canvasDiv = document.getElementById('DrawingContainer');
+    var width = canvasDiv.offsetWidth;
+    var sketchCanvas = createCanvas(width,450);
+    console.log(sketchCanvas);
+    sketchCanvas.parent("DrawingContainer");
+    background(230)
+    radius = height/2
+}
 
 function draw() {
   //translate(frameCount,0)
