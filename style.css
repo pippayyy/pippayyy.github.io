@@ -34,3 +34,9 @@ canvas {
   background-color: #04AA6D;
   color: white;
 }
+
+.art-div {
+  background-color:yellow;
+  width: 100%;
+  padding:25px;
+}
