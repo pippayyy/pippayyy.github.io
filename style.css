@@ -1,6 +1,6 @@
 html, body {
-  margin: 200;
-  padding: 200;
+  margin: 300;
+  padding: 300;
 }
 canvas {
   display: block;
@@ -35,8 +35,8 @@ canvas {
   color: white;
 }
 
-/*.art-div {
+.art-div {
   background-color:white;
   width: 100%;
-  padding:10px;
+  padding:20px;
 }
