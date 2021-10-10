@@ -56,18 +56,13 @@ canvas {
     padding: 10px;
 }
 
-
 .circle {
-    background: red;
-    border-radius: 200px;
-    color: white;
-    height: 200px;
-    font-weight: bold;
-    width: 200px;
-    display: table;
-    margin: 20px auto;
-}
-.circle p {
-    vertical-align: middle;
-    display: table-cell;
-}
+  margin: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;    
+    background: #808080;
+    color: #fff;
