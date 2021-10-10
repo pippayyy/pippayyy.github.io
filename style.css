@@ -57,9 +57,9 @@ canvas {
 }
 
 .circle {
-  margin: 20px;
-    width: 20px;
-    height: 20px;
+  margin: 10px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     font-size: 12px;
     line-height: 20px;
