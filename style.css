@@ -55,3 +55,19 @@ canvas {
     /* specify padding, can be changed while remaining fixed width of .outer */
     padding: 10px;
 }
+
+
+.circle {
+    background: red;
+    border-radius: 200px;
+    color: white;
+    height: 200px;
+    font-weight: bold;
+    width: 200px;
+    display: table;
+    margin: 20px auto;
+}
+.circle p {
+    vertical-align: middle;
+    display: table-cell;
+}
