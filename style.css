@@ -59,11 +59,11 @@ canvas {
 @import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css');
 
 .circle {
-  margin: 80px;
+  margin: 10px;
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 80px;
     text-align: center;    
     background: #e0e0e0;
