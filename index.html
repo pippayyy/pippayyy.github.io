@@ -16,6 +16,14 @@
   <script> function myFunction() {src="sketch.js"} </script>
   <script src="p5.js"></script>
   <script src="p5.sound.min.js"></script>
+	
+
+  <script>
+  $(function () {
+    $('#cp3b').colorpicker();
+  });
+</script>
+
 </head>
 <body>
 	
@@ -37,6 +45,14 @@
 </nav>
 	  
 <div class="b-example-divider"></div>
+	
+<div id="cp3a" class="input-group" data-color="rgb(241, 138, 49)"
+     title="Using data-color attribute in the colorpicker element">
+  <input type="text" class="form-control input-lg"/>
+  <span class="input-group-append">
+    <span class="input-group-text colorpicker-input-addon"><i></i></span>
+  </span>
+</div>
 	
 	
 <div class="row" align="center" style="padding-right: 30px; padding-bottom: 20px; padding-left: 30px">
