@@ -31,6 +31,14 @@ function setup() {
     radius = height/2
 }*/
 
+// Create a button for saving canvas image
+saveImageBtn = createButton("Save Canvas");
+saveImageBtn.position(150, 60);
+saveImageBtn.mousePressed(saveAsCanvas);
+
+function saveAsCanvas() {
+  save("output_canvas.png");
+}
 
 function draw() {
   //translate(frameCount,0)
