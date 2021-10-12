@@ -1,11 +1,6 @@
-html, body {
-  margin: 300;
-  padding: 300;
-}
 canvas {
   display: block;
 }
-
 
 /* Add a black background color to the top navigation */
 .topnav {
@@ -31,40 +26,39 @@ canvas {
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  background-color: #04AA6D;
+  background-color: #04aa6d;
   color: white;
 }
 
 .art-div {
-  background-color:white;
-  padding:20px;
+  background-color: white;
+  padding: 20px;
 }
 
-
-.outer, .inner {
-    display: block;
+.outer,
+.inner {
+  display: block;
 }
 
 .outer {
-    /* specify fixed width */
-    width: 600px;
-    padding: 0;
+  /* specify fixed width */
+  width: 600px;
+  padding: 0;
 }
 
 .inner {
-    /* specify padding, can be changed while remaining fixed width of .outer */
-    padding: 10px;
+  /* specify padding, can be changed while remaining fixed width of .outer */
+  padding: 10px;
 }
-
-@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css');
 
 .circle {
   margin: 10px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    font-size: 18px;
-    line-height: 50px;
-    text-align: center;    
-    background: #d3d3d3;
-    color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 18px;
+  line-height: 50px;
+  text-align: center;
+  background: #d3d3d3;
+  color: #fff;
+}
