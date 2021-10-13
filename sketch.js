@@ -38,7 +38,7 @@ centre_y = 100;
 function setup() {
   var MyCanvas = createCanvas(displayWidth * 0.6, displayHeight * 0.6);
   MyCanvas.parent("DrawingContainer");
-  background(230);
+  background(w.value);
   radius = height / (10 / p.value);
 }
 
