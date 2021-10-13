@@ -15,12 +15,12 @@ p.addEventListener(
 );
 
 var w = document.getElementById("exampleColorInput"),
-  res = document.getElementById("resultColour");
+  resW = document.getElementById("resultColour");
 
 w.addEventListener(
   "input",
   function () {
-    res.innerHTML = "Colour:" + w.value;
+    resW.innerHTML = "Colour:" + w.value;
   },
   false
 );
