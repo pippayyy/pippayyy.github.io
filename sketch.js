@@ -3,6 +3,17 @@
  * @description This allows creation of unique shapes
  */
 
+var p = document.getElementById("shapeSize"),
+  res = document.getElementById("result");
+
+p.addEventListener(
+  "input",
+  function () {
+    res.innerHTML = "size:" + p.value;
+  },
+  false
+);
+
 total_degrees = 360;
 radius = 0;
 r = Math.floor(Math.random() * 256);
@@ -17,7 +28,7 @@ function setup() {
   var MyCanvas = createCanvas(displayWidth * 0.6, displayHeight * 0.6);
   MyCanvas.parent("DrawingContainer");
   background(230);
-  radius = height / 2;
+  radius = height / (10 / p.value);
 }
 
 /*function setup() {
@@ -49,7 +60,7 @@ function draw() {
   }
   endShape(CLOSE);
   if (radius < 0) {
-    radius = height / 2;
+    radius = height / (10 / p.value);
     r = Math.floor(Math.random() * 256);
     g = Math.floor(Math.random() * 256);
     b = Math.floor(Math.random() * 256);

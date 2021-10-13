@@ -63,3 +63,7 @@ canvas {
   color: #fff;
   display: inline-block;
 }
+
+#result {
+  font-size: 2em;
+}
