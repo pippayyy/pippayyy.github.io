@@ -14,6 +14,17 @@ p.addEventListener(
   false
 );
 
+var w = document.getElementById("exampleColorInput"),
+  res = document.getElementById("resultColour");
+
+w.addEventListener(
+  "input",
+  function () {
+    res.innerHTML = "Colour:" + w.value;
+  },
+  false
+);
+
 total_degrees = 360;
 radius = 0;
 r = Math.floor(Math.random() * 256);
@@ -57,6 +68,7 @@ function draw() {
       y = centre_y + radius * sin(radians(i)) * noiseFactor;
       curveVertex(x, y - 100);
     }
+    Í;
   }
   endShape(CLOSE);
   if (radius < 0) {
