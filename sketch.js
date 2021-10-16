@@ -25,6 +25,17 @@ w.addEventListener(
   false
 );
 
+var n = document.getElementById("NoiseFactor"),
+  resN = document.getElementById("resultNoise");
+
+n.addEventListener(
+  "input",
+  function () {
+    resN.innerHTML = "size:" + n.value;
+  },
+  false
+);
+
 total_degrees = 360;
 radius = 0;
 r = Math.floor(Math.random() * 256);
@@ -63,7 +74,7 @@ function draw() {
     strokeWeight(stroke_weight);
     beginShape();
     for (let i = 0; i < total_degrees; i++) {
-      noiseFactor = noise(i * 0.02, float(frameCount) / 30);
+      noiseFactor = noise(i * n.value, float(frameCount) / 30);
       x = centre_x + radius * cos(radians(i)) * noiseFactor;
       y = centre_y + radius * sin(radians(i)) * noiseFactor;
       curveVertex(x, y - 100);
