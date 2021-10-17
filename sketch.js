@@ -4,7 +4,7 @@
  */
 
 var ElementShapeSize = document.getElementById("shapeSize"),
-  resultShapeSize = document.getElementById("result");
+  resultShapeSize = document.getElementById("resultSize");
 
 ElementShapeSize.addEventListener(
   "input",
@@ -66,7 +66,6 @@ function setup() {
 
 function draw() {
   //translate(frameCount,0)
-  //global total_degrees, radius,r,g,b,a,stroke_weight, centre_x, centre_y
   if (mouseIsPressed) {
     centre_x = mouseX;
     centre_y = mouseY;

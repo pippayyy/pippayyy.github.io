@@ -103,7 +103,7 @@
                     value=""
                     class="slider"
                   />
-                  <p id="result"></p>
+                  <p id="resultSize"></p>
                 </div>
               </div>
               <div class="col-sm-2">
@@ -151,7 +151,9 @@
             <div class="card-body">
               <p class="circle">4</p>
               <p class="card-text">Do something else here</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <a href="#" class="btn btn-primary" id="buttClear" role="button"
+                >Clear</a
+              >
               <p></p>
             </div>
           </div>
@@ -159,10 +161,16 @@
       </div>
 
       <div class="row text-selection-none">
-        <div class="col-sm">
+        <div class="col-sm-2">
+          <div class="card-body"></div>
+        </div>
+        <div class="col-sm-8">
           <div id="DrawingContainer" class="art-div" align="center">
             <script src="sketch.js"></script>
           </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="card-body"></div>
         </div>
       </div>
 
