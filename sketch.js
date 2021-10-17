@@ -3,35 +3,36 @@
  * @description This allows creation of unique shapes
  */
 
-var p = document.getElementById("shapeSize"),
-  res = document.getElementById("result");
+var ElementShapeSize = document.getElementById("shapeSize"),
+  resultShapeSize = document.getElementById("result");
 
-p.addEventListener(
+ElementShapeSize.addEventListener(
   "input",
   function () {
-    res.innerHTML = "size:" + p.value;
+    resultShapeSize.innerHTML = "size:" + ElementShapeSize.value;
   },
   false
 );
 
-var w = document.getElementById("exampleColorInput"),
-  resW = document.getElementById("resultColour");
+var ElementBackgroundColour = document.getElementById("exampleColorInput"),
+  resultBackgroundColour = document.getElementById("resultColour");
 
-w.addEventListener(
+ElementBackgroundColour.addEventListener(
   "input",
   function () {
-    resW.innerHTML = "Colour:" + w.value;
+    resultBackgroundColour.innerHTML =
+      "Colour:" + ElementBackgroundColour.value;
   },
   false
 );
 
-var n = document.getElementById("NoiseFactor"),
-  resN = document.getElementById("resultNoise");
+var ElementNoiseFactor = document.getElementById("NoiseFactor"),
+  resultNoiseFactor = document.getElementById("resultNoise");
 
-n.addEventListener(
+ElementNoiseFactor.addEventListener(
   "input",
   function () {
-    resN.innerHTML = "size:" + n.value;
+    resultNoiseFactor.innerHTML = "size:" + ElementNoiseFactor.value;
   },
   false
 );
@@ -49,8 +50,8 @@ centre_y = 100;
 function setup() {
   var MyCanvas = createCanvas(displayWidth * 0.6, displayHeight * 0.6);
   MyCanvas.parent("DrawingContainer");
-  background(w.value);
-  radius = height / (10 / p.value);
+  background(ElementBackgroundColour.value);
+  radius = height / (10 / ElementShapeSize.value);
 }
 
 /*function setup() {
@@ -74,7 +75,7 @@ function draw() {
     strokeWeight(stroke_weight);
     beginShape();
     for (let i = 0; i < total_degrees; i++) {
-      noiseFactor = noise(i * n.value, float(frameCount) / 30);
+      noiseFactor = noise(i * ElementNoiseFactor.value, float(frameCount) / 30);
       x = centre_x + radius * cos(radians(i)) * noiseFactor;
       y = centre_y + radius * sin(radians(i)) * noiseFactor;
       curveVertex(x, y - 100);
@@ -82,7 +83,7 @@ function draw() {
   }
   endShape(CLOSE);
   if (radius < 0) {
-    radius = height / (10 / p.value);
+    radius = height / (10 / ElementShapeSize.value);
     r = Math.floor(Math.random() * 256);
     g = Math.floor(Math.random() * 256);
     b = Math.floor(Math.random() * 256);
