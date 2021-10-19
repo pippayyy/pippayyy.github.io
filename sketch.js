@@ -72,6 +72,7 @@ function draw() {
     fill(r, g, b, a);
     stroke(r + 60, g - 60, b + 60);
     strokeWeight(stroke_weight);
+    background(ElementBackgroundColour.value);
     beginShape();
     for (let i = 0; i < total_degrees; i++) {
       noiseFactor = noise(i * ElementNoiseFactor.value, float(frameCount) / 30);
