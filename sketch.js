@@ -19,9 +19,8 @@ var ElementBackgroundColour = document.getElementById("exampleColorInput"),
 
 ElementBackgroundColour.addEventListener(
   "input",
-  function () {
-    resultBackgroundColour.innerHTML =
-      "Colour:" + ElementBackgroundColour.value;
+  function setbackcolour() {
+    background(ElementBackgroundColour.value);
   },
   false
 );
@@ -54,25 +53,16 @@ function setup() {
   radius = height / (10 / ElementShapeSize.value);
 }
 
-/*function setup() {
-    var canvasDiv = document.getElementById('DrawingContainer');
-    var width = canvasDiv.offsetWidth;
-    var sketchCanvas = createCanvas(width,450);
-    console.log(sketchCanvas);
-    sketchCanvas.parent("DrawingContainer");
-    background(230)
-    radius = height/2
-}*/
-
 function draw() {
-  //translate(frameCount,0)
+  //translate(frameCount, 0);
+
   if (mouseIsPressed) {
     centre_x = mouseX;
     centre_y = mouseY;
     fill(r, g, b, a);
     stroke(r + 60, g - 60, b + 60);
     strokeWeight(stroke_weight);
-    background(ElementBackgroundColour.value);
+    //background(ElementBackgroundColour.value);
     beginShape();
     for (let i = 0; i < total_degrees; i++) {
       noiseFactor = noise(i * ElementNoiseFactor.value, float(frameCount) / 30);
