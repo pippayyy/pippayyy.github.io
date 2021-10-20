@@ -24,7 +24,6 @@
     </script>
     <script src="p5.js"></script>
     <script src="p5.sound.min.js"></script>
-    <script src="https://unpkg.com/p5.layers@1"></script>
   </head>
   <body>
     <div class="container-fluid">
@@ -62,7 +61,7 @@
         <div class="col-sm-3">
           <div class="card border-secondary text-center p-4">
             <div class="card-body">
-              <p class="circle">1.1</p>
+              <p class="circle">1</p>
               <p class="card-text">Select a background colour</p>
               <div class="col-sm-2">
                 <div class="card-body"></div>
@@ -151,21 +150,61 @@
           <div class="card border-secondary text-center">
             <div class="card-body">
               <p class="circle">4</p>
-              <p class="card-text">Do something else here</p>
-              <a href="#" class="btn btn-primary" id="buttClear" role="button"
-                >Clear</a
-              >
-              <p></p>
+              <p class="card-text">Modify the line weight (chunkiness)</p>
+              <div class="col-sm-2">
+                <div class="card">
+                  <div class="card-body"></div>
+                </div>
+              </div>
             </div>
+            <div class="col-sm-8">
+              <div class="card-body">
+                <input
+                  type="range"
+                  min="1"
+                  max="10"
+                  step="1"
+                  id="StrokeWeight"
+                  value="1"
+                  class="slider"
+                />
+                <p id="resultStrokeWeight"></p>
+              </div>
+            </div>
+
+            <div class="col-sm-2">
+              <div class="card">
+                <div class="card-body"></div>
+              </div>
+            </div>
+            <p></p>
           </div>
         </div>
       </div>
 
       <div class="row text-selection-none">
-        <div class="col-sm">
+        <div class="col-sm-2">
+          <div class="card">
+            <div class="card-body">
+              <a href="#" class="btn btn-primary" id="buttClear" role="button"
+                >Clear</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-8">
           <div id="DrawingContainer" class="art-div" align="center">
             <script src="sketch.js"></script>
           </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="card">
+          <div class="card-body">
+            <a href="#" class="btn btn-primary" id="buttClear" role="button"
+              >Clear</a
+            >
+        </div>
         </div>
       </div>
 

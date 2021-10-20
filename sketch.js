@@ -36,13 +36,36 @@ ElementNoiseFactor.addEventListener(
   false
 );
 
+var ElementStrokeWeight = document.getElementById("StrokeWeight"),
+  resultStrokeWeight = document.getElementById("resultStrokeWeight");
+
+ElementStrokeWeight.addEventListener(
+  "input",
+  function () {
+    resultStrokeWeight.innerHTML = "weight:" + ElementStrokeWeight.value;
+  },
+  false
+);
+
+//ADD SHIT TO MAKE RESTART BUTTON WORK
+var ElementBackgroundColour = document.getElementById("exampleColorInput"),
+  resultBackgroundColour = document.getElementById("resultColour");
+
+ElementBackgroundColour.addEventListener(
+  "input",
+  function setbackcolour() {
+    background(ElementBackgroundColour.value);
+  },
+  false
+);
+
 total_degrees = 360;
 radius = 0;
 r = Math.floor(Math.random() * 256);
 g = Math.floor(Math.random() * 256);
 b = Math.floor(Math.random() * 256);
 a = 0;
-stroke_weight = 1;
+stroke_weight = ElementStrokeWeight.value;
 centre_x = 100;
 centre_y = 100;
 
@@ -61,7 +84,7 @@ function draw() {
     centre_y = mouseY;
     fill(r, g, b, a);
     stroke(r + 60, g - 60, b + 60);
-    strokeWeight(stroke_weight);
+    strokeWeight(ElementStrokeWeight.value);
     //background(ElementBackgroundColour.value);
     beginShape();
     for (let i = 0; i < total_degrees; i++) {
