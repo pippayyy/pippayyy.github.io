@@ -48,13 +48,11 @@ ElementStrokeWeight.addEventListener(
 );
 
 //ADD SHIT TO MAKE RESTART BUTTON WORK
-var ElementBackgroundColour = document.getElementById("exampleColorInput"),
-  resultBackgroundColour = document.getElementById("resultColour");
-
-ElementBackgroundColour.addEventListener(
-  "input",
-  function setbackcolour() {
-    background(ElementBackgroundColour.value);
+var ElementRestartButt = document.getElementById("restartButton");
+ElementRestartButt.addEventListener(
+  "click",
+  function () {
+    reset();
   },
   false
 );
@@ -70,6 +68,10 @@ centre_x = 100;
 centre_y = 100;
 
 function setup() {
+  reset();
+}
+
+function reset() {
   var MyCanvas = createCanvas(displayWidth * 0.6, displayHeight * 0.6);
   MyCanvas.parent("DrawingContainer");
   background(ElementBackgroundColour.value);
