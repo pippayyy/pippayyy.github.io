@@ -93,7 +93,7 @@ function draw() {
       noiseFactor = noise(i * ElementNoiseFactor.value, float(frameCount) / 30);
       x = centre_x + radius * cos(radians(i)) * noiseFactor;
       y = centre_y + radius * sin(radians(i)) * noiseFactor;
-      curveVertex(x, y - 100);
+      curveVertex(x, y);
     }
   }
   endShape(CLOSE);
