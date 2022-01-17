@@ -47,15 +47,25 @@ ElementStrokeWeight.addEventListener(
   false
 );
 
-//ADD SHIT TO MAKE RESTART BUTTON WORK
-/* var ElementRestartButt = document.getElementById("restartButton");
+//Restart Button
+var ElementRestartButt = document.getElementById("restartButton");
 ElementRestartButt.addEventListener(
   "click",
   function () {
     reset();
   },
   false
-); */
+);
+
+//Save Button
+var ElementRestartButt = document.getElementById("saveButton");
+ElementRestartButt.addEventListener(
+  "click",
+  function () {
+    save();
+  },
+  false
+);
 
 total_degrees = 360;
 radius = 0;
@@ -80,6 +90,10 @@ function reset() {
   radius = height / (10 / ElementShapeSize.value);
   MyCanvasHeight = MyCanvas.height;
   MyCanvasWidth = MyCanvas.width;
+}
+
+function save() {
+  saveCanvas(MyCanvas, "MyDrawing", "jpg");
 }
 
 function draw() {
