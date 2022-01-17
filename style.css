@@ -120,3 +120,8 @@ body {
   background-color: #04aa6d;
   color: white;
 }
+
+.ActionButton {
+  border-color: none;
+  background-image: linear-gradient(to top right, #d7e5f0, #a8dbc9);
+}

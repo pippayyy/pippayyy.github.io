@@ -3,6 +3,9 @@
  * @description This allows creation of unique shapes
  */
 
+var myModal = new bootstrap.Modal(document.getElementById("myModal"), {});
+myModal.show();
+
 var ElementShapeSize = document.getElementById("shapeSize"),
   resultShapeSize = document.getElementById("resultSize");
 
