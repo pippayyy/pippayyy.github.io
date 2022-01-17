@@ -125,3 +125,7 @@ body {
   border: none;
   background-image: linear-gradient(to top right, #d7e5f0, #a8dbc9);
 }
+
+.transparent {
+  background: rgba(0, 0, 0, 0.4);
+}
