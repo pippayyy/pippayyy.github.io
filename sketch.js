@@ -48,14 +48,14 @@ ElementStrokeWeight.addEventListener(
 );
 
 //ADD SHIT TO MAKE RESTART BUTTON WORK
-var ElementRestartButt = document.getElementById("restartButton");
+/* var ElementRestartButt = document.getElementById("restartButton");
 ElementRestartButt.addEventListener(
   "click",
   function () {
     reset();
   },
   false
-);
+); */
 
 total_degrees = 360;
 radius = 0;
@@ -66,6 +66,8 @@ a = 0;
 stroke_weight = ElementStrokeWeight.value;
 centre_x = 100;
 centre_y = 100;
+var CanvasSpaceWidth = document.getElementById("DrawingSpace").offsetWidth;
+var CanvasSpaceHeight = document.getElementById("DrawingSpace").offsetHeight;
 
 function setup() {
   reset();
@@ -84,33 +86,43 @@ function draw() {
   if (mouseIsPressed) {
     centre_x = mouseX;
     centre_y = mouseY;
-    fill(r, g, b, a);
-    stroke(r + 60, g - 60, b + 60);
-    strokeWeight(ElementStrokeWeight.value);
-    //background(ElementBackgroundColour.value);
-    beginShape();
-    for (let i = 0; i < total_degrees; i++) {
-      noiseFactor = noise(i * ElementNoiseFactor.value, float(frameCount) / 30);
-      x = centre_x + radius * cos(radians(i)) * noiseFactor;
-      y = centre_y + radius * sin(radians(i)) * noiseFactor;
-      curveVertex(x, y);
+    if (centre_x < CanvasSpaceWidth && centre_x >= 0) {
+      //console.log(centre_x);
+      //console.log(centre_y);
+      console.log(CanvasSpaceHeight);
+      console.log(CanvasSpaceWidth);
+      console.log(document.getElementById("DrawingSpace").height);
+      fill(r, g, b, a);
+      stroke(r + 60, g - 60, b + 60);
+      strokeWeight(ElementStrokeWeight.value);
+      //background(ElementBackgroundColour.value);
+      beginShape();
+      for (let i = 0; i < total_degrees; i++) {
+        noiseFactor = noise(
+          i * ElementNoiseFactor.value,
+          float(frameCount) / 30
+        );
+        x = centre_x + radius * cos(radians(i)) * noiseFactor;
+        y = centre_y + radius * sin(radians(i)) * noiseFactor;
+        curveVertex(x, y);
+      }
     }
-  }
-  endShape(CLOSE);
-  if (radius < 0) {
-    radius = height / (10 / ElementShapeSize.value);
-    r = Math.floor(Math.random() * 256);
-    g = Math.floor(Math.random() * 256);
-    b = Math.floor(Math.random() * 256);
-    a = 0;
-  } else {
-    radius -= 2;
-    r += 1;
-    b += 0.5;
-    g += 0.5;
-    a += 0.5;
-  }
-  function keyPressed() {
-    noLoop();
+    endShape(CLOSE);
+    if (radius < 0) {
+      radius = height / (10 / ElementShapeSize.value);
+      r = Math.floor(Math.random() * 256);
+      g = Math.floor(Math.random() * 256);
+      b = Math.floor(Math.random() * 256);
+      a = 0;
+    } else {
+      radius -= 2;
+      r += 1;
+      b += 0.5;
+      g += 0.5;
+      a += 0.5;
+    }
+    function keyPressed() {
+      noLoop();
+    }
   }
 }
