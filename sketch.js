@@ -66,8 +66,8 @@ a = 0;
 stroke_weight = ElementStrokeWeight.value;
 centre_x = 100;
 centre_y = 100;
-var CanvasSpaceWidth = document.getElementById("DrawingSpace").offsetWidth;
-var CanvasSpaceHeight = document.getElementById("DrawingSpace").offsetHeight;
+MyCanvasHeight = 0;
+MyCanvasWidth = 0;
 
 function setup() {
   reset();
@@ -78,6 +78,8 @@ function reset() {
   MyCanvas.parent("DrawingContainer");
   background(ElementBackgroundColour.value);
   radius = height / (10 / ElementShapeSize.value);
+  MyCanvasHeight = MyCanvas.height;
+  MyCanvasWidth = MyCanvas.width;
 }
 
 function draw() {
@@ -86,12 +88,12 @@ function draw() {
   if (mouseIsPressed) {
     centre_x = mouseX;
     centre_y = mouseY;
-    if (centre_x < CanvasSpaceWidth && centre_x >= 0) {
-      //console.log(centre_x);
-      //console.log(centre_y);
-      console.log(CanvasSpaceHeight);
-      console.log(CanvasSpaceWidth);
-      console.log(document.getElementById("DrawingSpace").height);
+    if (
+      centre_x < MyCanvasWidth &&
+      centre_x >= 0 &&
+      centre_y < MyCanvasHeight &&
+      centre_y >= 0
+    ) {
       fill(r, g, b, a);
       stroke(r + 60, g - 60, b + 60);
       strokeWeight(ElementStrokeWeight.value);
