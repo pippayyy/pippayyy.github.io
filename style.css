@@ -122,6 +122,6 @@ body {
 }
 
 .ActionButton {
-  border-color: none;
+  border: none;
   background-image: linear-gradient(to top right, #d7e5f0, #a8dbc9);
 }
