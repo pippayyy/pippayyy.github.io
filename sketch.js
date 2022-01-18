@@ -61,14 +61,26 @@ ElementRestartButt.addEventListener(
 );
 
 //Save Button
-var ElementRestartButt = document.getElementById("saveButton");
-ElementRestartButt.addEventListener(
+var ElementSaveButt = document.getElementById("saveButton");
+ElementSaveButt.addEventListener(
   "click",
   function () {
     save();
   },
   false
 );
+
+function createMetaTag() {
+  let meta = createElement("meta");
+  meta.attribute("name", "viewport");
+  meta.attribute(
+    "content",
+    "user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width,height=device-height"
+  );
+
+  let head = select("head");
+  meta.parent(head);
+}
 
 total_degrees = 360;
 radius = 0;
@@ -87,7 +99,10 @@ function setup() {
 }
 
 function reset() {
-  var MyCanvas = createCanvas(window.innerWidth, window.innerHeight );
+  var MyCanvas = createCanvas(
+    window.innerWidth * 0.8,
+    window.innerHeight * 0.8
+  );
   MyCanvas.parent("DrawingContainer");
   background(ElementBackgroundColour.value);
   radius = height / (10 / ElementShapeSize.value);
