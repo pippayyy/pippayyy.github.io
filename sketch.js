@@ -87,7 +87,7 @@ function setup() {
 }
 
 function reset() {
-  var MyCanvas = createCanvas(displayWidth * 0.6, displayHeight * 0.6);
+  var MyCanvas = createCanvas(window.innerWidth, window.innerHeight );
   MyCanvas.parent("DrawingContainer");
   background(ElementBackgroundColour.value);
   radius = height / (10 / ElementShapeSize.value);

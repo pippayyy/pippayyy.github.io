@@ -80,9 +80,11 @@ canvas {
 }
 
 .navbar-nav > li {
-  padding-right: 5px;
-  padding-left: 5px;
   padding-top: 5px;
+}
+
+.nav-title {
+  padding-right: 5px;
 }
 
 .mt-0 {
