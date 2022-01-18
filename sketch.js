@@ -100,8 +100,8 @@ function setup() {
 
 function reset() {
   var MyCanvas = createCanvas(
-    window.innerWidth * 0.5,
-    window.innerHeight * 0.8
+    window.innerWidth * 0.6,
+    window.innerHeight * 0.6
   );
   MyCanvas.parent("DrawingContainer");
   background(ElementBackgroundColour.value);
