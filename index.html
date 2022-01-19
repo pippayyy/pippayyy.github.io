@@ -36,6 +36,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script>
+        function copyToClipboard(element) {
+          var $temp = $("<input>");
+          $("body").append($temp);
+          $temp.val($(element).text()).select();
+          document.execCommand("copy");
+          $temp.remove();
+        }
+        </script>
+
+
+    <script>
       function myFunction() {
         src = "sketch.js";
       }
@@ -75,7 +86,6 @@
           </div>
 
           <div class="modal-footer">
-            </button>
             <button type="button" class="btn btn-primary ActionButton text-black"
             data-bs-dismiss="modal">
               Got it!
@@ -84,6 +94,27 @@
         </div>
       </div>
     </div>
+
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Copied to clipboard!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary ActionButton text-black"
+            data-bs-dismiss="modal">
+              Close
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <!-- Left Nav -->
     <nav class="navbar sticky-top navbar-expand" data-toggle="affix">
@@ -218,7 +249,7 @@
         <div class="col-md-3 p-3">
           <div class="card h-100 shadow-lg text-center">
             <div class="card-body">
-              <p class="circle">3</p>
+              <p class="circle">4</p>
               <p class="card-title lead">Modify the line weight (chunkiness)</p>
               <div class="row">
                 <div class="col-2"></div>
@@ -274,6 +305,8 @@
                   href="#"
                   id="shareButton"
                   role="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
                 >
                   <i class="bi bi-share pr-2"></i> Share</a
                 >
@@ -297,13 +330,14 @@
         <!-- Spacer  -->
         <div class="row h-50">
           <div class="col-12 h-100">
-            <div class="card-body"></div>
+            <div class="card-body">
+            </div>
           </div>
         </div>
 
         <!-- Main Section -->
         <div class="row">
-          <div class="col md-12 d-flex justify-content-center">
+          <div class="col md-12 d-flex justify-content-center text-selection-none">
             <div class="card shadow-lg" id="DrawingSpace">
               <div class="card-body">
                 <div id="DrawingContainer" class="art-div" align="center">

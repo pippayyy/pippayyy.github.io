@@ -70,6 +70,23 @@ ElementSaveButt.addEventListener(
   false
 );
 
+//Share Button
+var ElementShareButt = document.getElementById("shareButton");
+ElementShareButt.addEventListener(
+  "click",
+  function () {
+    copyURL();
+  },
+  false
+);
+
+//function to copy text to clipboard
+function copyURL() {
+  var siteURL = "https://pippayyy.github.io";
+  var dummyToSelect = $("<input>").val(siteURL).appendTo("body").select();
+  document.execCommand("copy");
+}
+
 function createMetaTag() {
   let meta = createElement("meta");
   meta.attribute("name", "viewport");
