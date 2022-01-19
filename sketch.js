@@ -87,6 +87,14 @@ function copyURL() {
   document.execCommand("copy");
 }
 
+var code = $("#copy-to-clipboard-input");
+var btnCopy = $("#shareButton");
+
+//btnCopy.on("click", function () {
+//code.select();
+//document.execCommand("copy");
+//});
+
 function createMetaTag() {
   let meta = createElement("meta");
   meta.attribute("name", "viewport");
